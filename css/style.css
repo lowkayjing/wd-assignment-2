@@ -1,0 +1,153 @@
+:root {
+    --primary: #ffacff;
+    --accent: #ff81ff;
+}
+
+body {
+    font-family: lucida grande, tahoma, verdana, arial, sans-serif;
+    background: linear-gradient(to top, var(--primary), #87ceeb);
+}
+
+body p {
+    font-size: 0.8em;
+    line-height: 1.28;
+}
+
+#wrapper {
+    width: 1080px;
+    background-color: white;
+    margin: 0 auto;
+    padding: 10px;
+    border: 5px solid #dedede;
+}
+
+#content-area {
+    margin: 0 auto 20px auto;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    min-height: 500px;
+}
+
+#content-area::after {
+    background-repeat: no-repeat;
+    background-image: url(../img/women-clinic.jpeg);
+    opacity: 0.2;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    right: 23px;
+    box-shadow: 0 0 8px 20px white inset;
+    background-size: cover;
+}
+
+footer {
+    clear: both;
+    width: auto;
+    height: 40px;
+    padding: 10px;
+    border: 3px solid #e3e3e3;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0.1em 0.1em #333;
+    background-image: url(../img/ubar.jpeg);
+}
+
+#navigation {
+    height: 60px;
+    border: 3px solid #e3e3e3;
+    text-shadow: 0.1em 0.1em #333;
+    background-image: url(../img/ubar.jpeg);
+}
+
+#nav {
+    list-style: none;
+}
+
+#nav ul {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    display: none;
+}
+
+#nav li {
+    font-size: 24px;
+    float: left;
+    position: relative;
+    width: 180px;
+    height: 50px;
+}
+
+#nav a:link,
+nav a:active,
+nav a:visited {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+#nav a:hover {
+    color: lightblue;
+}
+
+.imgLeft {
+    float: left;
+    width: 240px;
+    height: 150px;
+    margin: 0 10px 10px 0;
+    padding: 10px;
+}
+
+.imgRight {
+    float: right;
+    width: 200px;
+    height: 250px;
+    margin: 0 0 10px 10px;
+    padding: 10px;
+}
+
+form {
+    z-index: 1;
+}
+
+form td {
+    vertical-align: top;
+    padding-right: 15px;
+}
+
+form td:first-child {
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+    margin-bottom: 8px;
+    margin-top: -2px;
+    font-size: 90%;
+}
+
+input:not([type=submit]), textarea {
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+input[type="submit"] {
+    margin-top: 10px;
+    float: right;
+    font-weight: bold;
+    background: pink;
+    border-radius: 4px;
+    padding: 8px;
+    border: 1px solid maroon;
+    color: #222;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    color: #000;
+}

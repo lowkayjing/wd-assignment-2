@@ -1,0 +1,25 @@
+form[action="login.php"] {
+    align-self: center;
+    margin-top: -4rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+form[action="login.php"] h2 {
+    text-align: center;
+}
+
+form[action="login.php"] table {
+    width: 100%;
+}
+
+form[action="login.php"] h2 small {
+    display: block;
+    opacity: 0.5;
+    font-size: 70%;
+}
+
+form[action="login.php"] input:not([type="submit"]) {
+    width: 100%;
+}
