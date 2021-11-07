@@ -68,7 +68,7 @@ $content = '<h1>Hello ' . $_SESSION["username"] . ', welcome to Taylor’s Clini
     </thead>
     <tbody>' . join(null, $patients ?? []) . '</tbody>
 </table>
-</section>' : '<div class="message">Search for patient or <a href="register.php">add new patient</a></div>');
+</section>' : '<div class="message">Search for patient or <a href="create.php">add new patient</a></div>');
 $styles = '<link href="css/index.css" rel="stylesheet">';
 $scripts = '<script src="js/index.js"></script>';
 
