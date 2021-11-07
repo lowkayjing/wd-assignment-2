@@ -3,7 +3,7 @@
 include_once './lib/session.php';
 include_once './lib/config.php';
 
-if (empty($_POST['search']) && !empty($_SESSION['search'])) {
+if (!isset($_POST['search']) && !empty($_SESSION['search'])) {
     $_POST['search'] = $_SESSION['search'];
 }
 
