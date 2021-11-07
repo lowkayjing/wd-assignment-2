@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/PatientManagementSystem.iml" filepath="$PROJECT_DIR$/.idea/PatientManagementSystem.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../wdpractical/.idea/wdpractical.iml" filepath="$PROJECT_DIR$/../wdpractical/.idea/wdpractical.iml" />
-    </modules>
-  </component>
-</project>
