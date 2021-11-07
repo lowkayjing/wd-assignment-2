@@ -1,3 +1,5 @@
+@import url('nav.css');
+
 :root {
     --primary: #ffacff;
     --accent: #ff81ff;
@@ -14,7 +16,7 @@ body p {
 }
 
 #wrapper {
-    width: 1080px;
+    width: 1100px;
     background-color: white;
     margin: 0 auto;
     padding: 10px;
@@ -31,6 +33,10 @@ body p {
     min-height: 500px;
 }
 
+#content-area * {
+    z-index: 1;
+}
+
 #content-area::after {
     background-repeat: no-repeat;
     background-image: url(../img/women-clinic.jpeg);
@@ -41,8 +47,8 @@ body p {
     bottom: 0;
     position: absolute;
     right: 23px;
-    box-shadow: 0 0 8px 20px white inset;
-    background-size: cover;
+    box-shadow: 0 0 50px 50px white inset;
+    background-size: contain;
 }
 
 footer {
@@ -64,37 +70,6 @@ footer {
     background-image: url(../img/ubar.jpeg);
 }
 
-#nav {
-    list-style: none;
-}
-
-#nav ul {
-    margin: 0;
-    padding: 0;
-    width: auto;
-    display: none;
-}
-
-#nav li {
-    font-size: 24px;
-    float: left;
-    position: relative;
-    width: 180px;
-    height: 50px;
-}
-
-#nav a:link,
-nav a:active,
-nav a:visited {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-}
-
-#nav a:hover {
-    color: lightblue;
-}
-
 .imgLeft {
     float: left;
     width: 240px;
@@ -109,10 +84,6 @@ nav a:visited {
     height: 250px;
     margin: 0 0 10px 10px;
     padding: 10px;
-}
-
-form {
-    z-index: 1;
 }
 
 form td {

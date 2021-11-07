@@ -1,5 +1,5 @@
 <?php
-include_once 'config.php';
+include_once './lib/config.php';
 
 $errors = ['username' => '', 'password' => '', 'login' => ''];
 
@@ -56,4 +56,4 @@ $content = '<form action="login.php" method="POST">
 </form>';
 $styles = '<link href="./css/login.css" rel="stylesheet">';
 
-include 'template.php';
+include './lib/template.php';

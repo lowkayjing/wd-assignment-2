@@ -1,0 +1,55 @@
+#navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav {
+    list-style: none;
+}
+
+#nav ul {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    display: none;
+}
+
+#nav li {
+    font-size: 24px;
+    float: left;
+    position: relative;
+    margin-right: 20px;
+}
+
+#nav a:link,
+nav a:active,
+nav a:visited {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+#nav a:hover {
+    color: lightblue;
+}
+
+#navigation form {
+    margin-right: 30px;
+    display: flex;
+}
+
+#navigation input[name=search] {
+    margin: 0;
+    justify-self: flex-end;
+    width: 300px;
+}
+
+#navigation button[type=submit] svg {
+    width: 1.4rem;
+    vertical-align: middle;
+}
+
+#navigation button[type=submit] {
+    cursor: pointer;
+}

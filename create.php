@@ -1,6 +1,6 @@
 <?php
-include_once 'config.php';
-include_once 'session.php';
+include_once './lib/config.php';
+include_once './lib/session.php';
 $fullName = $gender = $address = $dob = $email = $age = $pn = '';
 $errors = ['fullName' => '', 'gender' => '', 'address' => '', 'dob' => '', 'email' => '', 'age' => '', 'pn' => ''];
 
@@ -181,4 +181,4 @@ $content = !empty($registeredPatient) ? $registeredPatient : '<form action="regi
     <input type="submit" name="submit" value="Register">
 </form>';
 
-include 'template.php';
+include './lib/template.php';
