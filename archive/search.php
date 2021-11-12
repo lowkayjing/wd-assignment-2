@@ -14,12 +14,12 @@ include 'template.php';
 
 <?php
 include("config.php");
-$errors = array('fullName' => '', 'gender' => '', 'address' => '', 'dob' => '', 'email' => '', 'age' => '', 'pn' => '');
+$errors = array('fullName' => '', 'gender' => '', 'address' => '', 'dob' => '', 'email' => '', 'age' => '', 'phoneNumber' => '');
 
 if(isset($_POST["search"]))
 {
     $id = $_POST["id"];
-    $sql = 'SELECT id, fullName, gender, address, dob, email, age, pn FROM patients WHERE id = (SELECT LAST_INSERT_ID())';
+    $sql = 'SELECT id, fullName, gender, address, dob, email, age, phoneNumber FROM patients WHERE id = (SELECT LAST_INSERT_ID())';
     $results = mysqli_query($conn, $sql);
 
     if(mysqli_num_rows($results) > 0)
@@ -50,7 +50,7 @@ if(isset($_POST["search"]))
                 <input type="text" name="age" value="<?php echo $row['age']?>"><br><br>
 
                 <label for="id"> Phone Number </label><br>
-                <input type="text" name="pn" value="<?php echo $row['pn']?>"><br><br>
+                <input type="text" name="phoneNumber" value="<?php echo $row['phoneNumber']?>"><br><br>
 
                 <input type="submit" name="update" value="Update">
                 <input type="submit" name="delete" value="Delete">
@@ -139,17 +139,17 @@ if(isset($_POST["update"]))
      }
      
       /*Phone Number------------------------------------------*/
-     if(empty($_POST["pn"]))
+     if(empty($_POST["phoneNumber"]))
      {
-         $errors['pn'] = "Phone number is required. Please ensure the phone number is filled out. </br>";
+         $errors['phoneNumber'] = "Phone number is required. Please ensure the phone number is filled out. </br>";
      }
      else
      {
-         $pn = $_POST['pn'];
+         $phoneNumber = $_POST['phoneNumber'];
  
-         if(!filter_var($pn,FILTER_VALIDATE_PHONENUMBER))
+         if(!filter_var($phoneNumber,FILTER_VALIDATE_PHONENUMBER))
          {
-             $errors['pn'] = "Please insert a valid phone number. Example: +60. </br>";
+             $errors['phoneNumber'] = "Please insert a valid phone number. Example: +60. </br>";
          }
      }         
 
@@ -162,9 +162,9 @@ if(isset($_POST["update"]))
         $dob = mysqli_real_escape_string ($conn, $_POST['dob']);
         $email = mysqli_real_escape_string ($conn, $_POST['email']);
         $age = mysqli_real_escape_string ($conn, $_POST['age']);
-        $pn = mysqli_real_escape_string ($conn, $_POST['pn']);
+        $phoneNumber = mysqli_real_escape_string ($conn, $_POST['phoneNumber']);
 
-        $sql = "UPDATE patients SET name='$fullName', gender='$gender', address='$address', dob='$dob', email='$email', age='$age', pn='$pn' WHERE id='$id'";
+        $sql = "UPDATE patients SET name='$fullName', gender='$gender', address='$address', dob='$dob', email='$email', age='$age', phoneNumber='$phoneNumber' WHERE id='$id'";
 
         $results = mysqli_query($conn, $sql);
 
@@ -209,8 +209,8 @@ if(isset($_POST["update"]))
         <div style="color:red"><?php echo $errors['age'] ?></div><br>
 
         <label for="id"> Phone Number </label><br>
-        <input type="text" name="pn" value="<?php echo $pn?>"><br>
-        <div style="color:red"><?php echo $errors['pn'] ?></div><br>        
+        <input type="text" name="phoneNumber" value="<?php echo $phoneNumber?>"><br>
+        <div style="color:red"><?php echo $errors['phoneNumber'] ?></div><br>        
 
         <input type="submit" name="update" value="Update">
         <input type="submit" name="delete" value="Delete">

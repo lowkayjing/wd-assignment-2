@@ -6,13 +6,7 @@
 
 #nav {
     list-style: none;
-}
-
-#nav ul {
-    margin: 0;
-    padding: 0;
-    width: auto;
-    display: none;
+    padding-left: 20px;
 }
 
 #nav li {

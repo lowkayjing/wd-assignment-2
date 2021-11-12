@@ -16,7 +16,7 @@
 
     <nav id="navigation">
         <ul id="nav">
-            <li><a href="index.php">Welcome</a></li>
+            <li><a href="index.php">Home</a></li>
             <?= isset($_SESSION["username"]) ? '<li><a href="create.php">New Patient</a></li>' : '' ?>
         </ul>
         <?= isset($_SESSION["username"]) ?

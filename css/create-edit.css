@@ -1,0 +1,25 @@
+form[action*="create.php"], form[action*="edit.php"] {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+form[action*="create.php"] h2, form[action*="edit.php"] h2 {
+    text-align: center;
+}
+
+form[action*="create.php"] table, form[action*="edit.php"] table {
+    width: 100%;
+}
+
+form[action*="create.php"] h2 small, form[action*="edit.php"] h2 small {
+    display: block;
+    opacity: 0.5;
+    font-size: 70%;
+}
+
+form[action*="create.php"] input[type="text"], form[action*="create.php"] input[type="date"],
+form[action*="edit.php"] input[type="text"], form[action*="edit.php"] input[type="date"] {
+    width: 100%;
+}
