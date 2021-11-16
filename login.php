@@ -47,6 +47,7 @@ $content = '<form action="login.php" method="POST">
         </tr>
     </table>
     <div class="error">' . $errors['login'] . '</div>
+    <a href="#" class="forgot">Forgot Password</a>
     <div>
         <input type="submit" name="submit" value="Submit">
     </div>

@@ -23,3 +23,15 @@ form[action="login.php"] h2 small {
 form[action="login.php"] input:not([type="submit"]) {
     width: 100%;
 }
+
+.forgot {
+    display: block;
+    text-align: right;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    font-size: .9rem;
+}
+
+.error + .forgot {
+    margin-top: 0;
+}

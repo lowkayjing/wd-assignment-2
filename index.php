@@ -73,8 +73,7 @@ if ($shouldDisplayResults) {
     $conn->close();
 }
 
-$content = '<h1>Hello ' . $_SESSION["username"] . ', welcome to Taylor’s Clinic</h1>' .
-    ($shouldDisplayResults ? '<section>
+$content = ($shouldDisplayResults ? '<section>
 <div class="index-heading">
     <h2>Patients (' . count($patients ?? []) . ')</h2>
     <div class="pagination">
@@ -115,7 +114,7 @@ $content = '<h1>Hello ' . $_SESSION["username"] . ', welcome to Taylor’s Clini
     </thead>
     <tbody>' . join(null, $patients ?? []) . '</tbody>
 </table>
-</section>' : '<div class="message">Search for patient or <a href="create.php">add new patient</a></div>');
+</section>' : '<h1>Hello ' . $_SESSION["username"] . ', welcome to Taylor’s Clinic</h1>' . '<div class="message"><a href="index.php?search=">Search for patient</a> or <a href="create.php">add new patient</a></div>');
 $styles = '<link href="css/index.css" rel="stylesheet">';
 $scripts = '<script src="js/index.js"></script>';
 
