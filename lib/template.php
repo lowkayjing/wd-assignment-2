@@ -20,7 +20,7 @@
             <?= isset($_SESSION["username"]) ? '<li><a href="create.php">New Patient</a></li>' : '' ?>
         </ul>
         <?= isset($_SESSION["username"]) ?
-            '<form action="index.php" method="post">
+            '<form action="index.php" method="get">
                 <input type="text" name="search" placeholder="Search Patient" value="' . ($_POST['search'] ?? '') . '" />
                 <button type="submit">
                     <svg viewBox="0 0 24 24">

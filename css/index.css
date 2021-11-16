@@ -41,3 +41,18 @@
 .button:hover, .confirm span:hover {
     opacity: 1;
 }
+
+.index-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination {
+    display: flex;
+    margin-right: 15px;
+}
+
+.pagination > div {
+    margin-left: 15px;
+}

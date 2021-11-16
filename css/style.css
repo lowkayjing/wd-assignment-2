@@ -48,7 +48,7 @@ body p {
     position: absolute;
     right: 23px;
     box-shadow: 0 0 50px 50px white inset;
-    background-size: contain;
+    background-size: cover;
 }
 
 footer {

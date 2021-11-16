@@ -13,14 +13,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
     if (!array_filter($errors)) {
         $username = mysqli_real_escape_string($conn, $_POST['username']);
-        $password = mysqli_real_escape_string($conn, $_POST['password']);
+        $password = $_POST['password'];
 
-        $sql = "SELECT username, password FROM users WHERE username = '$username'  AND password = '$password'";
+        $result = mysqli_query($conn, "SELECT username, password FROM users WHERE username = '$username'");
 
-        // check username and password match record in database
-        $result = mysqli_query($conn, $sql);
-
-        if ($result->num_rows == 1) {
+        if (password_verify($password, mysqli_fetch_array($result)['password'])) {
             session_start();
             $_SESSION['username'] = $username;
             header("Location: index.php");

@@ -29,3 +29,12 @@ delegate(document, 'click', '.no', function(e) {
     t.closest('.confirm').classList.add('d-none');
     t.closest('td').querySelector('.buttons').classList.remove('d-none');
 });
+
+delegate(document, 'change', '.pagination select[name="size"], .pagination select[name="page"]', function(e) {
+    var t = e.target;
+    var url = new URL(window.location);
+
+    url.searchParams.set(t.name, t.value);
+
+    window.location = url;
+});
