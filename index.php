@@ -11,7 +11,7 @@ $page = $_GET["page"] ?? 1;
 $offset = ($page - 1) * $size;
 $pageCount = 1;
 
-// Store page size in cookie
+// Retain page size in cookie
 setcookie('index:size', $size, 2147483647);
 
 if ($shouldDisplayResults) {
@@ -88,11 +88,13 @@ $content = '<h1>Hello ' . $_SESSION["username"] . ', welcome to Taylor’s Clini
         </div>
         <div>
             <label>Page</label>
+            ' . ($pageCount > 1 ? "<span data-page='1'>&laquo;</span>" : '') . '
             <select name="page">
                 ' . (join('', array_map(function ($o) use ($pageCount, $page) {
             return "<option value='$o' " . ($o == $page ? 'selected="selected"' : '') . ">$o</option>";
         }, range(1, $pageCount ?: 1)))) . '
             </select>
+            ' . ($pageCount > 1 ? "<span data-page='$pageCount'>&raquo;</span>" : '') . '
         </div>
     </div>
 </div>

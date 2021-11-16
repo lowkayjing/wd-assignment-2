@@ -51,8 +51,14 @@
 .pagination {
     display: flex;
     margin-right: 15px;
+    font-size: 0.9rem;
 }
 
 .pagination > div {
-    margin-left: 15px;
+    margin-left: 20px;
+}
+
+.pagination [data-page] {
+    opacity: 0.8;
+    cursor: pointer;
 }
